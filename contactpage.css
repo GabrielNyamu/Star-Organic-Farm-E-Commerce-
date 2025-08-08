@@ -1,0 +1,102 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;/*
+    background-image: url("man on farm.webp");*/
+    background-image: url("smile greenhouse.webp");
+    background-size: contain; 
+    background-position: center; /*
+    background-repeat: no-repeat; */
+    width: 100vw; 
+    height: 100vh;
+    overflow: hidden; 
+}
+.header {
+    background-color: #f8f8f8;
+    color: rgba(9, 239, 12, 0.651);
+    padding: 2px 20px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+    transform: scale(0.8);
+}
+.nav {
+    display: flex;
+    gap: 3cm;
+    margin-top: 10px;
+    justify-content: center; 
+    width: 100%;
+    
+}
+
+.nav a {
+    color: rgb(6, 128, 18);
+    text-decoration: none;
+    font-size: 25px;
+   
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo {
+    height: 60px;
+}
+.logo-text {
+    color: rgb(17, 154, 1);
+    font-size: 18px;
+    margin-top: 10px;
+}
+  
+p{
+    color: aliceblue;
+} 
+
+
+
+
+
+.contact-form {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 25cm;
+    margin-left: 8cm;
+    margin-top: 50px;
+}
+.contact-form h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-form button {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.contact-form button:hover {
+    background: #218838;
+}

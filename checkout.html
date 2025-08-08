@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+
+    .checkout-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .checkout-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .checkout-items {
+      margin-bottom: 20px;
+    }
+
+    .checkout-items p {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .payment-form label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .payment-form input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .payment-form button {
+      margin-top: 20px;
+      padding: 10px;
+      width: 100%;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .payment-form button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="checkout-container">
+  <h2>Checkout</h2>
+
+  <div class="checkout-items" id="checkout-items"></div>
+  <p class="total">Total: ksh<span id="checkout-total">0.00</span></p>
+
+  <form class="payment-form" id="payment-form">
+    <h3>Payment Information</h3>
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" required>
+
+    <label for="mpesa-code">Mpesa Transaction Code</label>
+    <input type="text" id="mpesa-code" required>
+
+    <button type="submit">Confirm Payment</button>
+  </form>
+</div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const cartData = JSON.parse(decodeURIComponent(urlParams.get('cart')));
+  const checkoutItemsContainer = document.getElementById('checkout-items');
+  const checkoutTotal = document.getElementById('checkout-total');
+
+  let total = 0;
+
+  cartData.forEach(item => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+
+    const itemElement = document.createElement('p');
+    itemElement.textContent = `${item.name} x${item.quantity} - ksh${itemTotal.toFixed(2)}`;
+    checkoutItemsContainer.appendChild(itemElement);
+  });
+
+  checkoutTotal.textContent = total.toFixed(2);
+
+  // Handle form submission
+  document.getElementById('payment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const mpesaCode = document.getElementById('mpesa-code').value;
+
+    // In real app: validate and send to backend
+    alert(`Payment confirmed for ${name}.\nPhone: ${phone}\nTransaction Code: ${mpesaCode}\nTotal Paid: ksh${total.toFixed(2)}\n\nThank you for your order!`);
+
+    // Clear form (optional)
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
