@@ -1,34 +1,34 @@
-# Star Organic Farm: Full-Stack E-Commerce Platform 🌱
+# Star Organic Farm: Full-Stack E-Commerce Platform 
 
-## 📌 Project Overview
+##  Project Overview
 **Star Organic Farm** is a full-featured web application designed to connect local farmers directly with consumers. This platform digitizes the supply chain for organic produce, managing everything from inventory tracking to order fulfillment.
 
 This project demonstrates my core competency in **Full Stack Development** using the LAMP/WAMP stack, serving as the foundational application layer into which I am currently integrating predictive AI models.
 
-## 🚀 Key Features
+##  Key Features
 * **Role-Based Access Control:** Distinct portals for **Admins** (Inventory/Sales management) and **Customers** (Shopping/Order tracking).
 * **Dynamic Inventory Management:** Real-time updates of stock levels for organic produce using PHP and SQL.
 * **Secure Transaction Flow:** Implemented secure checkout logic and session management.
 * **Database Optimization:** Efficient SQL schema design to handle complex relationships between Users, Orders, and Products.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 * **Frontend:** HTML5, CSS3, JavaScript (Vanilla)
 * **Backend:** PHP (Native)
 * **Database:** MySQL / SQL
 * **Version Control:** Git
 
-## 🏛️ System Architecture
+##  System Architecture
 The application is built on a standard 3-tier architecture:
 1.  **Presentation Layer:** HTML/CSS/JS frontend for a responsive user interface.
 2.  **Application Layer:** PHP scripts handle business logic, form processing, and authentication.
 3.  **Data Layer:** SQL database storing persistent user and transaction data.
 
-## 🔮 Future AI Integrations (Roadmap)
+##  Future AI Integrations (Roadmap)
 As an AI Engineer, I am continuously upgrading this platform to include:
 * **Demand Forecasting:** Implementing a Time-Series model (Arima) to predict stock shortages based on seasonal trends.
 * **Smart Recommendations:** Adding a Collaborative Filtering engine to suggest products based on user purchase history.
 
-## 💻 How to Run
+##  How to Run
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/GabrielNyamu/Star-Organic-Farm-E-Commerce-.git](https://github.com/GabrielNyamu/Star-Organic-Farm-E-Commerce-.git)
